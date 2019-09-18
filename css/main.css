@@ -827,6 +827,39 @@ html {
   background-color: #e5e5ca;
 }
 
+.breadcrumb {
+  background-color: #fff;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 35px;
+}
+.breadcrumb li:before {
+  padding-right: 10px;
+  padding-left: 12px;
+  color: #ababab;
+  content: "/ ";
+}
+.breadcrumb li:first-child:before {
+  display: none;
+}
+.breadcrumb a {
+  font-size: 14px;
+  color: #ababab;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.breadcrumb a:hover {
+  color: #6d1c1c;
+}
+.breadcrumb a.active {
+  color: #6d1c1c;
+  cursor: default;
+}
+
 .recent-ads-sec {
   margin-top: 43px;
 }
@@ -1019,6 +1052,34 @@ html {
 .see-more-ads:before {
   background-color: #6d1c1c;
   border-radius: 5px;
+}
+
+.titles {
+  display: flex;
+  flex-direction: column;
+  margin-top: 34px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.post-header {
+  color: #333333;
+  font-size: 22px;
+  font-family: "Frutiger-bold";
+}
+
+.post-price {
+  color: #8a2d2d;
+  font-family: "Frutiger-black";
+}
+
+.post-place {
+  color: #a3a3a3;
+  font-size: 16px;
 }
 
 .cats {
