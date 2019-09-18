@@ -602,6 +602,7 @@ html {
 .xs-nav .ac-li {
   align-items: unset;
   justify-content: unset;
+  margin-bottom: 5px;
 }
 .xs-nav .ac-li a {
   margin-bottom: 0;
