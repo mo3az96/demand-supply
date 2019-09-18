@@ -1,7 +1,7 @@
-$(window).load(function () {
+window.onload = function () {
     // Animate loader off screen
 
-    $(".loader").fadeOut("slow", function () {
+    $(".loader").fadeOut(1000, function () {
         $(this).parent().hide();
         $('body').css("overflow", "auto");
         $('html, body').animate({
@@ -9,7 +9,7 @@ $(window).load(function () {
         }, 1);
     });
 
-});
+}
 $(document).ready(function () {
     $('.search-ico').click(function () {
         $('.sec-bar-sec').stop().slideToggle(500);
