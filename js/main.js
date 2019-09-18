@@ -1,13 +1,13 @@
 $(window).load(function () {
     // Animate loader off screen
 
-    // $(".loader").fadeOut("slow", function () {
-    //     $(this).parent().hide();
-    //     $('body').css("overflow", "auto");
-    //     $('html, body').animate({
-    //         scrollTop: 0
-    //     }, 1);
-    // });
+    $(".loader").fadeOut("slow", function () {
+        $(this).parent().hide();
+        $('body').css("overflow", "auto");
+        $('html, body').animate({
+            scrollTop: 0
+        }, 1);
+    });
 
 });
 $(document).ready(function () {
