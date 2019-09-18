@@ -33,6 +33,14 @@
         }
     }
 
+    @media (max-width:767px) {
+        border: none;
+        width: unset;
+        height: unset;
+        text-align: right;
+        margin-bottom: 10px;
+        display: block;
+    }
 }
 
 .navlink {
@@ -41,6 +49,10 @@
 
     &:hover {
         color: #333333;
+    }
+
+    @media (max-width:767px) {
+        margin-left: auto;
     }
 }
 
@@ -68,6 +80,8 @@
         height: auto;
         border: none;
         margin-bottom: 15px;
+
+
     }
 
     .navlink {
@@ -79,5 +93,67 @@
         &:hover {
             color: $maincolor;
         }
+    }
+}
+
+.mo-droplinks {
+    li {
+        @media (max-width:767px) {
+            margin: 5px 0;
+            padding-right: 15px;
+        }
+    }
+}
+
+.xs-nav {
+    display: none;
+
+    @media (max-width:767px) {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        background-color: rgba(#000, 0.5);
+        z-index: 999999;
+    }
+
+    .main-xs-nav {
+        padding: 80px 25px 30px;
+        background-color: #fff;
+        width: 290px;
+        height: 100%;
+        z-index: 9999999;
+        position: fixed;
+        right: 0;
+        top: 0;
+    }
+
+    .ac-li {
+        align-items: unset;
+        justify-content: unset;
+
+        a {
+            margin-bottom: 0;
+        }
+    }
+
+    .nav-links {
+        @media (max-width:767px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: unset;
+            align-items: unset;
+        }
+    }
+
+    .closebtn {
+        position: absolute;
+        top: 25px;
+        font-size: 15px;
+        cursor: pointer;
+        left: 0px;
+        margin-left: 25px;
+        color: #494949
     }
 }

@@ -9,7 +9,30 @@ $(document).ready(function () {
     }, function () {
         $('.overlay').fadeOut(500);
     });
-
+    $('.menu-ico').click(function () {
+        $('.xs-nav').show();
+        $('.main-xs-nav').addClass('inscreen');
+        $('.main-xs-nav').removeClass('outscreen');
+        $('body').css("overflow", "hidden");
+        $('html').css("overflow", "hidden");
+    });
+    $('.xs-nav').click(function () {
+        $('.xs-nav').fadeOut(500);
+        $('.main-xs-nav').addClass('outscreen');
+        $('.main-xs-nav').removeClass('inscreen');
+        $('body').css("overflow", "auto");
+        $('html').css("overflow", "auto");
+    });
+    $(".main-xs-nav").click(function (e) {
+        e.stopPropagation();
+    });
+    $('.closebtn').click(function () {
+        $('.xs-nav').fadeOut(500);
+        $('.main-xs-nav').addClass('outscreen');
+        $('.main-xs-nav').removeClass('inscreen');
+        $('body').css("overflow", "auto");
+        $('html').css("overflow", "auto");
+    });
     if ($(window).width() <= 767) {
         $(".foot-nav-links-header").addClass("mo-accordion");
         $(".foot-links").addClass("mo-panel");

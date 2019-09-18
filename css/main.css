@@ -503,6 +503,16 @@ html {
   opacity: 1;
   visibility: visible;
 }
+@media (max-width: 767px) {
+  .navlink-li {
+    border: none;
+    width: unset;
+    height: unset;
+    text-align: right;
+    margin-bottom: 10px;
+    display: block;
+  }
+}
 
 .navlink {
   color: #333333;
@@ -510,6 +520,11 @@ html {
 }
 .navlink:hover {
   color: #333333;
+}
+@media (max-width: 767px) {
+  .navlink {
+    margin-left: auto;
+  }
 }
 
 .megamenu {
@@ -551,6 +566,62 @@ html {
 }
 .megamenu .navlink:hover {
   color: #6d1c1c;
+}
+
+@media (max-width: 767px) {
+  .mo-droplinks li {
+    margin: 5px 0;
+    padding-right: 15px;
+  }
+}
+
+.xs-nav {
+  display: none;
+}
+@media (max-width: 767px) {
+  .xs-nav {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999999;
+  }
+}
+.xs-nav .main-xs-nav {
+  padding: 80px 25px 30px;
+  background-color: #fff;
+  width: 290px;
+  height: 100%;
+  z-index: 9999999;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+.xs-nav .ac-li {
+  align-items: unset;
+  justify-content: unset;
+}
+.xs-nav .ac-li a {
+  margin-bottom: 0;
+}
+@media (max-width: 767px) {
+  .xs-nav .nav-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: unset;
+    align-items: unset;
+  }
+}
+.xs-nav .closebtn {
+  position: absolute;
+  top: 25px;
+  font-size: 15px;
+  cursor: pointer;
+  left: 0px;
+  margin-left: 25px;
+  color: #494949;
 }
 
 .mo-accordion {
