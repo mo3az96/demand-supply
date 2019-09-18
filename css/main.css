@@ -118,6 +118,7 @@ html[dir=ltr] .outscreen {
 }
 body {
   font-family: Frutiger;
+  overflow: hidden;
 }
 body::-webkit-scrollbar {
   background-color: rgba(83, 83, 83, 0.2);
@@ -134,6 +135,7 @@ body::-webkit-scrollbar-thumb:hover {
 html {
   scrollbar-width: thin;
   scrollbar-color: rgba(109, 28, 28, 0.75) rgba(83, 83, 83, 0.2);
+  overflow: hidden;
 }
 
 .container {
@@ -1393,6 +1395,67 @@ html {
 }
 .footer .social-link:nth-of-type(3) {
   background-color: #4464b1;
+}
+
+.load-page {
+  background: #d2d2af;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 99999999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader {
+  width: 250px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: helvetica, arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #6d1c1c;
+  letter-spacing: 0.2em;
+}
+.loader::before, .loader::after {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  background: #6d1c1c;
+  position: absolute;
+  animation: load 0.7s infinite alternate ease-in-out;
+}
+.loader::before {
+  top: 0;
+}
+.loader::after {
+  bottom: 0;
+}
+
+@keyframes load {
+  0% {
+    left: 0;
+    height: 30px;
+    width: 15px;
+  }
+  50% {
+    height: 8px;
+    width: 40px;
+  }
+  100% {
+    left: 235px;
+    height: 30px;
+    width: 15px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

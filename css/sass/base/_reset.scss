@@ -1,5 +1,6 @@
 body {
     font-family: Frutiger;
+    overflow: hidden;
 
     &::-webkit-scrollbar {
         background-color: rgba(#535353, 0.2);
@@ -19,6 +20,7 @@ body {
 html {
     scrollbar-width: thin;
     scrollbar-color: rgba($maincolor, 0.75) rgba(#535353, 0.2);
+    overflow: hidden;
 }
 
 .container {
