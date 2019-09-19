@@ -1,13 +1,13 @@
 window.onload = function () {
     // Animate loader off screen
 
-    // $(".loader").fadeOut(1000, function () {
-    //     $(this).parent().hide();
-    //     $('body, html').css("overflow", "auto");
-    //     $('html, body').animate({
-    //         scrollTop: 0
-    //     }, 1);
-    // });
+    $(".loader").fadeOut(500, function () {
+        $(this).parent().hide();
+        $('body, html').css("overflow", "auto");
+        $('html, body').animate({
+            scrollTop: 0
+        }, 1);
+    });
 
     function fix_slider_img_height() {
         var x = $(".main-slider").height()
