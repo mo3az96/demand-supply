@@ -826,6 +826,10 @@ html {
   margin-left: 25px;
   color: #494949;
 }
+.xs-nav .add-ad {
+  display: flex;
+  margin: 15px auto;
+}
 
 .main-slider .owl-nav {
   width: 0;
@@ -1029,7 +1033,8 @@ html {
     bottom: -17px;
   }
 }
-.top-bar-sec .add-ad {
+
+.add-ad {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1045,17 +1050,17 @@ html {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-.top-bar-sec .add-ad i {
+.add-ad i {
   margin-left: 7px;
 }
-.top-bar-sec .add-ad:before {
+.add-ad:before {
   background-color: #6d1c1c;
 }
-.top-bar-sec .add-ad:hover {
+.add-ad:hover {
   color: #e5e5ca;
 }
 @media (max-width: 767px) {
-  .top-bar-sec .add-ad {
+  .add-ad {
     display: none;
   }
 }
