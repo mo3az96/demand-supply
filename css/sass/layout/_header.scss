@@ -161,4 +161,9 @@
 
 .navbar-sec {
     background-color: #e5e5ca;
+    border-top: 1px solid #d2d2af;
+
+    @media (max-width:767px) {
+        border: none;
+    }
 }

@@ -43,7 +43,9 @@ $color-loader: #6d1c1c;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-family: 'Frutiger-black';
+    font-family: sans-serif;
+    font-weight: bolder;
+    font-size: 20px;
     color: $color-loader;
 
     &::before,
@@ -107,7 +109,7 @@ $color-loader: #6d1c1c;
     font-family: 'Frutiger-bold';
     height: 50px;
     align-items: center;
-    padding: 0 50px;
+    padding: 0 25px;
     width: 100%;
     display: flex;
     justify-content: space-between;

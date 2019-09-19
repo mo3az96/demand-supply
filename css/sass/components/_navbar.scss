@@ -27,6 +27,11 @@
         background-color: #fff;
         border-color: #fff;
 
+        @media (max-width:767px) {
+            background-color: #e5e5ca;
+            border-color: #d2d2af;
+        }
+
         .megamenu {
             opacity: 1;
             visibility: visible;
@@ -129,7 +134,7 @@
     }
 
     .main-xs-nav {
-        background-color: #fff;
+        background-color: #e5e5ca;
         width: 270px;
         height: 800px;
         z-index: 9999999;

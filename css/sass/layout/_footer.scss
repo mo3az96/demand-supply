@@ -130,14 +130,15 @@
         display: flex;
         align-items: center;
 
-        img {
+        a {
+            display: flex;
             margin-left: 13px;
         }
 
         @media (max-width:767px) {
             flex-direction: column;
 
-            img {
+            a {
                 margin: 0;
                 margin-bottom: 10px;
             }
@@ -262,7 +263,7 @@
 
 .footer {
     margin-top: 51px;
-    padding-bottom: 29px;
+    padding-bottom: 40px;
 
     .logo {
         @media (max-width:767px) {

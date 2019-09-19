@@ -175,8 +175,13 @@
         margin-left: 9px;
     }
 
+    &:before {
+        background-color: #dedede;
+    }
+
     &:hover {
-        border-color: $maincolor;
+        color: #333;
+        border-color: #dedede;
     }
 
     &.add-report {
@@ -193,7 +198,8 @@
     }
 
     &.report-open {
-        border-color: $maincolor;
+        border-color: #dedede;
+        background-color: #dedede;
 
         &:after {
             content: '\f0de';
