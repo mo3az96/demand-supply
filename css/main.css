@@ -710,7 +710,7 @@ html {
 }
 @media (max-width: 767px) {
   .navlink-li {
-    border: none;
+    border-left: none;
     width: unset;
     height: 50px;
     padding: 0 25px;
@@ -761,7 +761,7 @@ html {
 .megamenu .navlink-li {
   width: 110px;
   height: auto;
-  border: none;
+  border-left: none;
   margin-bottom: 15px;
 }
 .megamenu .navlink {
@@ -840,7 +840,7 @@ html {
 }
 .xs-nav .add-ad {
   display: flex;
-  margin: 15px auto;
+  margin: 30px auto;
 }
 
 .main-slider .owl-nav {

@@ -34,7 +34,7 @@
     }
 
     @media (max-width:767px) {
-        border: none;
+        border-left: none;
         width: unset;
         height: 50px;
         padding: 0 25px;
@@ -82,7 +82,7 @@
     .navlink-li {
         width: 110px;
         height: auto;
-        border: none;
+        border-left: none;
         margin-bottom: 15px;
 
 
@@ -170,6 +170,6 @@
 
     .add-ad {
         display: flex;
-        margin: 15px auto;
+        margin: 30px auto;
     }
 }
