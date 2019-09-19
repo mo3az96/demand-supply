@@ -151,6 +151,10 @@
 
 .sec-bar-sec {
     background-color: #d2d2af;
+
+    @media (max-width:767px) {
+        display: none;
+    }
 }
 
 .navbar-sec {

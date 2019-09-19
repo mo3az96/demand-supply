@@ -43,11 +43,8 @@ $color-loader: #6d1c1c;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-family: helvetica, arial, sans-serif;
-    text-transform: uppercase;
-    font-weight: 900;
+    font-family: 'Frutiger-black';
     color: $color-loader;
-    letter-spacing: 0.2em;
 
     &::before,
     &::after {

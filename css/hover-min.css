@@ -2098,14 +2098,12 @@
     transition-timing-function: ease-out
 }
 
-.hvr-shutter-out-horizontal:active,
-.hvr-shutter-out-horizontal:focus,
+
 .hvr-shutter-out-horizontal:hover {
     color: #fff
 }
 
-.hvr-shutter-out-horizontal:active:before,
-.hvr-shutter-out-horizontal:focus:before,
+
 .hvr-shutter-out-horizontal:hover:before {
     -webkit-transform: scaleX(1);
     transform: scaleX(1)
