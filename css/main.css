@@ -1414,6 +1414,7 @@ html {
   margin-bottom: 13px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 .show-btn {
