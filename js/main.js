@@ -3,12 +3,18 @@ window.onload = function () {
 
     $(".loader").fadeOut(1000, function () {
         $(this).parent().hide();
-        $('body').css("overflow", "auto");
+        $('body, html').css("overflow", "auto");
         $('html, body').animate({
             scrollTop: 0
         }, 1);
     });
 
+    function fix_slider_img_height() {
+        var x = $(".main-slider").height()
+        $("#map").height(x);
+    }
+    $('.main-slider').on("initialized.owl.carousel", fix_slider_img_height);
+    $('.main-slider').on("resized.owl.carousel", fix_slider_img_height);
 }
 $(document).ready(function () {
     $('.search-ico').click(function () {
@@ -52,6 +58,10 @@ $(document).ready(function () {
         $(".cat-nav-links-header").addClass("mo-accordion");
         $(".cat-links").addClass("mo-panel");
     }
+    if ($(window).width() <= 991) {
+        $(".table-title").addClass("mo-accordion");
+        $(".table-cont").addClass("mo-panel");
+    }
     var acc = document.getElementsByClassName("mo-accordion");
     var i;
 
@@ -66,4 +76,68 @@ $(document).ready(function () {
             }
         });
     }
+
+    function fix_slider_img_height() {
+        var x = $(".main-slider").height()
+        $("#map").height(x);
+    }
+    $('.main-slider').on("initialized.owl.carousel", fix_slider_img_height);
+    $('.main-slider').on("resized.owl.carousel", fix_slider_img_height);
+    $('.main-slider').owlCarousel({
+        items: 1,
+        autoplay: false,
+        margin: 10,
+        rtl: true,
+        loop: true,
+        nav: true,
+        dots: false,
+        navText: ["<i class='fas fa-chevron-right'></i>", "<i class='fas fa-chevron-left'></i>"],
+        responsive: {
+            0: {
+                dots: false,
+                nav: false,
+            },
+            500: {
+                dots: false,
+                nav: false,
+
+            },
+            768: {
+                dots: false,
+                nav: true,
+            },
+        }
+    });
+    //map
+    var adresse = "<img style='width:50px; text-align: left; display:inline-block; margin-right: 10px; vertical-align: sub;' src='img/logofooter.png'> <div style='display:inline-block;'>Blackstone<br>0540000000<br>info@blackstone.sa</div>";
+
+
+    var location = [adresse[0], $("#map").attr("lat"), $("#map").attr("long")];
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 11,
+        center: new google.maps.LatLng(24.8629889, 46.5980617),
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        zoomControl: false,
+        fullscreenControl: false
+    });
+
+    var infowindow = new google.maps.InfoWindow();
+
+    var marker;
+    marker = new google.maps.Marker({
+        position: new google.maps.LatLng(location[1], location[2]),
+        map: map,
+        icon: ' ',
+
+    });
+
+    google.maps.event.addListener(marker, 'click', (function (marker, i) {
+        return function () {
+            infowindow.setContent(location[0]);
+            infowindow.open(map, marker);
+        }
+    })(marker));
+
+    ////////////////////////////////////////////
 });
