@@ -1,6 +1,7 @@
 window.onload = function () {
     // Animate loader off screen
 
+
     $(".loader").fadeOut(500, function () {
         $(this).parent().hide();
         $('body, html').css("overflow", "auto");
@@ -62,6 +63,7 @@ $(document).ready(function () {
         $('.main-xs-nav').removeClass('inscreen');
         $('body').css("overflow", "auto");
         $('html').css("overflow", "auto");
+        $('.level2').removeClass('enter1')
     });
     $(".main-xs-nav").click(function (e) {
         e.stopPropagation();
