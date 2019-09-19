@@ -24,8 +24,7 @@ $(document).ready(function () {
         $('#employlist').toggleClass('enter1')
     });
     $('.back').click(function () {
-        $('#employlist').removeClass('enter1')
-        $('#buildlist').removeClass('enter1')
+        $('.level2').removeClass('enter1')
     });
 
 
