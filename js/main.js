@@ -76,8 +76,7 @@ $(document).ready(function () {
         $('html').css("overflow", "auto");
     });
     if ($(window).width() <= 767) {
-        $(".foot-nav-links-header").addClass("mo-accordion");
-        $(".foot-links").addClass("mo-panel");
+
 
         $(".cat-nav-links-header").addClass("mo-accordion");
         $(".cat-links").addClass("mo-panel");
