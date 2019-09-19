@@ -266,6 +266,7 @@ html {
   box-shadow: none;
   max-height: 150px !important;
   padding-left: 10px;
+  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.3);
 }
 .sec-bar .bootstrap-select .dropdown-menu li {
   background-color: #fff !important;
@@ -306,6 +307,9 @@ html {
 .sec-bar .dropdown-menu > li > a:active {
   background-color: #fff !important;
   outline: unset !important;
+}
+.sec-bar .open .btn.dropdown-toggle.btn-default {
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3) !important;
 }
 
 .search-input {
