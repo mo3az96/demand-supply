@@ -20,7 +20,7 @@
     cursor: pointer;
 
     &:last-of-type {
-        border: none;
+        border-left: none;
     }
 
     &:hover {
@@ -36,10 +36,13 @@
     @media (max-width:767px) {
         border: none;
         width: unset;
-        height: unset;
+        height: 50px;
+        padding: 0 25px;
         text-align: right;
-        margin-bottom: 10px;
-        display: block;
+        margin-bottom: 0;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #d2d2af;
     }
 }
 
@@ -53,6 +56,7 @@
 
     @media (max-width:767px) {
         margin-left: auto;
+        font-family: 'Frutiger-bold';
     }
 }
 
@@ -99,8 +103,14 @@
 .mo-droplinks {
     li {
         @media (max-width:767px) {
-            margin: 5px 0;
-            padding-right: 15px;
+            margin: 0;
+            height: 40px;
+            display: flex;
+            align-items: center;
+
+            a {
+                font-family: 'Frutiger';
+            }
         }
     }
 }
@@ -119,7 +129,6 @@
     }
 
     .main-xs-nav {
-        padding: 80px 25px 30px;
         background-color: #fff;
         width: 270px;
         height: 800px;

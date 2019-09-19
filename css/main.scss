@@ -84,3 +84,53 @@ $color-loader: #6d1c1c;
         width: 15px
     }
 }
+
+.mo-droplinks {
+    transform: translateX(125%);
+    transition: .5s;
+}
+
+.enter1 {
+    background-color: #0f0;
+    transform: translateX(0);
+}
+
+.menus {
+    position: relative;
+    width: 100%;
+}
+
+.back {
+    font-size: 16px;
+    background-color: $maincolor;
+    color: #d2d2af;
+    font-family: 'Frutiger-bold';
+    height: 50px;
+    align-items: center;
+    padding: 0 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    &::after {
+        content: '\f054';
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        font-size: 13px;
+        color: #d2d2af;
+    }
+}
+
+.megaxs-link {
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+
+    &::after {
+        content: '\f053';
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        font-size: 13px;
+        color: #333;
+    }
+}
