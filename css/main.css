@@ -2146,6 +2146,9 @@ html {
   font-size: 13px;
   color: #d2d2af;
 }
+.back:hover {
+  color: #d2d2af;
+}
 
 .megaxs-link {
   width: 100%;
