@@ -30,10 +30,10 @@ $(document).ready(function () {
     });
 
     $(".mega-menu-btn").hover(function () {
-        $('.overlay').show(500);
+        $('.overlay').fadeIn(500);
 
     }, function () {
-        $('.overlay').show(500);
+        $('.overlay').hide(0);
     });
     $('.menu-ico').click(function () {
         $('.xs-nav').show();
