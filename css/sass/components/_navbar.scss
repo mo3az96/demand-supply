@@ -30,6 +30,7 @@
         @media (max-width:767px) {
             background-color: #e5e5ca;
             border-color: #d2d2af;
+            height: 50px;
         }
 
         .megamenu {
@@ -48,6 +49,7 @@
         display: flex;
         align-items: center;
         border-bottom: 1px solid #d2d2af;
+        flex: auto;
     }
 }
 
@@ -89,8 +91,7 @@
         height: auto;
         border-left: none;
         margin-bottom: 15px;
-
-
+        flex: 0;
     }
 
     .navlink {
@@ -126,7 +127,7 @@
     @media (max-width:767px) {
         position: fixed;
         width: 100%;
-        height: 100%;
+
         top: 0;
         right: 0;
         background-color: rgba(#000, 0.5);

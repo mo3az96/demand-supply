@@ -720,6 +720,7 @@ html {
   .navlink-li:hover {
     background-color: #e5e5ca;
     border-color: #d2d2af;
+    height: 50px;
   }
 }
 .navlink-li:hover .megamenu {
@@ -737,6 +738,7 @@ html {
     display: flex;
     align-items: center;
     border-bottom: 1px solid #d2d2af;
+    flex: auto;
   }
 }
 
@@ -781,6 +783,7 @@ html {
   height: auto;
   border-left: none;
   margin-bottom: 15px;
+  flex: 0;
 }
 .megamenu .navlink {
   font-size: 15px;
@@ -814,7 +817,6 @@ html {
   .xs-nav {
     position: fixed;
     width: 100%;
-    height: 100%;
     top: 0;
     right: 0;
     background-color: rgba(0, 0, 0, 0.5);
