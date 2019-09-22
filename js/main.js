@@ -18,11 +18,8 @@ window.onload = function () {
     $('.main-slider').on("resized.owl.carousel", fix_slider_img_height);
 }
 $(document).ready(function () {
-    $('#buildcall').click(function () {
-        $('#buildlist').toggleClass('enter1')
-    });
-    $('#employcall').click(function () {
-        $('#employlist').toggleClass('enter1')
+    $('.megaxs-link').click(function () {
+        $(this).children('.level2').toggleClass('enter1')
     });
     $('.back').click(function () {
         $('.level2').removeClass('enter1')
