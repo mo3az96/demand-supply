@@ -1842,6 +1842,14 @@ html {
   font-size: 16px;
   margin-bottom: 10px;
 }
+.adv-search-cont .adv-search-form label.label-xs {
+  display: none;
+}
+@media (max-width: 991px) {
+  .adv-search-cont .adv-search-form label.label-xs {
+    display: flex;
+  }
+}
 .adv-search-cont .adv-search-form .adv-search-btn-cont {
   display: flex;
   justify-content: flex-end;
