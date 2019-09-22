@@ -697,9 +697,9 @@ html {
 }
 
 .navlink-li {
-  width: 228px;
   border-left: 1px solid #d2d2af;
   display: flex;
+  flex: 1;
   align-items: center;
   justify-content: center;
   height: 50px;
