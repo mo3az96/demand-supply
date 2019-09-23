@@ -53,3 +53,7 @@ html {
     display: none;
     z-index: 3;
 }
+
+input[type='number'] {
+    -moz-appearance: textfield !important;
+}

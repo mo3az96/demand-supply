@@ -32,11 +32,6 @@
             border-color: #d2d2af;
             height: 50px;
         }
-
-        .megamenu-cont {
-            opacity: 1;
-            visibility: visible;
-        }
     }
 
     @media (max-width:767px) {
@@ -78,6 +73,18 @@
     opacity: 0;
     visibility: hidden;
     padding: 33px 0 35px;
+    @include transition(all 0.3s ease-in-out);
+}
+
+.megafade {
+    opacity: 1;
+    visibility: visible;
+}
+
+.link-active {
+    background-color: #fff;
+    border-color: #fff;
+    color: #333333;
 }
 
 .megamenu {
