@@ -30,7 +30,6 @@
     }
 
     .filters-btn {
-        margin-right: 8px;
         border-radius: 5px;
         background-color: #6d1c1c;
         width: 55px;
@@ -47,10 +46,32 @@
         }
 
         @media (max-width:767px) {
-            width: 100%;
-            order: 2;
-            margin-top: 20px;
+            width: 30px;
+            height: 30px;
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            z-index: 9999;
+            opacity: 0.75;
+            transition: 0.5s;
+
+            &:after {
+                content: '\f0b0';
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                font-size: 16px;
+                color: #e5e5ca;
+            }
         }
+    }
+}
+
+.filter-btn-transform {
+    right: auto !important;
+    left: 30px;
+
+    &:after {
+        content: '\f00d' !important;
     }
 }
 
@@ -61,6 +82,11 @@
     h2 {
         font-size: 16px;
         color: #333333;
+    }
+
+    @media (max-width:767px) {
+        width: 100%;
+        margin-top: 20px;
     }
 
     .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
@@ -75,6 +101,12 @@
             border-bottom-left-radius: 0;
             border-bottom-right-radius: 0;
             border-bottom: none;
+        }
+
+        @media (max-width:767px) {
+            width: calc(100% - 76px);
+            order: 2;
+
         }
     }
 
@@ -210,13 +242,24 @@
 }
 
 .filters-cont {
-    @media (max-width:991px) {
-        display: none;
+    @media (max-width:767px) {
+        display: block;
+        position: fixed;
+        z-index: 99999;
+        top: 0;
+        right: 0;
+        transform: translateX(125%);
+        transition: .5s;
+        background-color: #fff;
+        padding: 50px 25px;
+        width: calc(100% - 90px);
+        max-height: 100%;
+        overflow-y: auto;
     }
 }
 
 .filter-cont {
-    margin-bottom: 25px;
+    margin-bottom: 35px;
 }
 
 .result-cont {
@@ -225,7 +268,7 @@
 
 .filter-header {
     font-family: "Frutiger-bold";
-    font-size: 18px;
+    font-size: 16px;
     color: #231f20;
     padding-bottom: 10px;
     border-bottom: 2px solid #f5f5f5;
@@ -279,7 +322,7 @@
         margin-right: 8px;
         border-radius: 5px;
         background-color: #6d1c1c;
-        width: 55px;
+        width: 40px;
         height: 40px;
         border: 1px solid transparent;
         color: #e5e5ca;
@@ -295,7 +338,7 @@
 
 .distance {
 
-    width: calc(100% - 63px);
+    width: calc(100% - 48px);
 
     .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
         border-radius: 5px;
@@ -496,7 +539,7 @@
         margin-right: 8px;
         border-radius: 5px;
         background-color: #6d1c1c;
-        width: 55px;
+        width: 40px;
         height: 40px;
         border: 1px solid transparent;
         color: #e5e5ca;
@@ -513,7 +556,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        width: calc(100% - 63px);
+        width: calc(100% - 48px);
 
     }
 
@@ -581,15 +624,26 @@
     max-height: 262px;
     overflow: hidden;
     @include transition(all 0.3s ease-in-out);
+
+    a {
+        &:before {
+            display: none !important;
+        }
+    }
 }
 
 .seemore {
     font-size: 16px;
-    color: #333;
+    color: #777676;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: 10px;
+
+    span {
+        text-decoration: underline;
+    }
 
     &:after {
         content: '\f078';
@@ -598,6 +652,7 @@
         margin-left: 10px;
         font-size: 10px;
         color: #333333;
+        border-bottom: 1px solid transparent;
     }
 
     &:hover {

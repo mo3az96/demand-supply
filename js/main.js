@@ -27,9 +27,6 @@ $(document).ready(function () {
     $('.megaxs-link').click(function () {
         $(this).children('.level2').toggleClass('enter1')
     });
-    $('.filters-btn').click(function () {
-        $('.filters-cont').slideToggle(500)
-    });
     $('.back').click(function () {
         $('.level2').removeClass('enter1')
     });
@@ -66,15 +63,15 @@ $(document).ready(function () {
         $('.xs-nav').show();
         $('.main-xs-nav').addClass('inscreen');
         $('.main-xs-nav').removeClass('outscreen');
-        $('body').css("overflow", "hidden");
-        $('html').css("overflow", "hidden");
+        $('body').toggleClass('overfolow')
+        $('html').toggleClass('overfolow')
     });
     $('.xs-nav').click(function () {
         $('.xs-nav').fadeOut(500);
         $('.main-xs-nav').addClass('outscreen');
         $('.main-xs-nav').removeClass('inscreen');
-        $('body').css("overflow", "auto");
-        $('html').css("overflow", "auto");
+        $('body').toggleClass('overfolow')
+        $('html').toggleClass('overfolow')
         $('.level2').removeClass('enter1')
     });
     $(".main-xs-nav").click(function (e) {
@@ -84,8 +81,22 @@ $(document).ready(function () {
         $('.xs-nav').fadeOut(500);
         $('.main-xs-nav').addClass('outscreen');
         $('.main-xs-nav').removeClass('inscreen');
-        $('body').css("overflow", "auto");
-        $('html').css("overflow", "auto");
+        $('body').toggleClass('overfolow')
+        $('html').toggleClass('overfolow')
+    });
+
+    $('.filters-btn').click(function () {
+        $('.filters-cont').toggleClass('enter1')
+        $(this).toggleClass('filter-btn-transform').css("z-index", "99999")
+        $(".overlay").toggle().css("z-index", "9999")
+        $('body').toggleClass('overfolow')
+        $('html').toggleClass('overfolow')
+    });
+    $('.overlay').click(function () {
+        $('.filters-cont').removeClass('enter1')
+        $('.filters-btn').removeClass('filter-btn-transform')
+        $('body').toggleClass('overfolow')
+        $('html').toggleClass('overfolow')
     });
     if ($(window).width() <= 767) {
 

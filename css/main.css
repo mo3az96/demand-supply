@@ -175,6 +175,10 @@ input[type=number] {
   -moz-appearance: textfield !important;
 }
 
+.overfolow {
+  overflow: hidden !important;
+}
+
 @font-face {
   font-family: "Frutiger";
   src: url("../fonts/frutiger/FrutigerLTArabic-55Roman.ttf");
@@ -1243,7 +1247,6 @@ input[type=number] {
   color: #6d1c1c;
 }
 .breadcrumb a.active {
-  color: #6d1c1c;
   cursor: default;
 }
 
@@ -2061,7 +2064,6 @@ input[type=number] {
   }
 }
 .filters-xs .filters-btn {
-  margin-right: 8px;
   border-radius: 5px;
   background-color: #6d1c1c;
   width: 55px;
@@ -2080,10 +2082,30 @@ input[type=number] {
 }
 @media (max-width: 767px) {
   .filters-xs .filters-btn {
-    width: 100%;
-    order: 2;
-    margin-top: 20px;
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    z-index: 9999;
+    opacity: 0.75;
+    transition: 0.5s;
   }
+  .filters-xs .filters-btn:after {
+    content: "";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 16px;
+    color: #e5e5ca;
+  }
+}
+
+.filter-btn-transform {
+  right: auto !important;
+  left: 30px;
+}
+.filter-btn-transform:after {
+  content: "" !important;
 }
 
 .result-sort {
@@ -2093,6 +2115,12 @@ input[type=number] {
 .result-sort h2 {
   font-size: 16px;
   color: #333333;
+}
+@media (max-width: 767px) {
+  .result-sort {
+    width: 100%;
+    margin-top: 20px;
+  }
 }
 .result-sort .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
   border-radius: 5px;
@@ -2106,6 +2134,12 @@ input[type=number] {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   border-bottom: none;
+}
+@media (max-width: 767px) {
+  .result-sort .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+    width: calc(100% - 76px);
+    order: 2;
+  }
 }
 .result-sort .dropdown-toggle {
   border: none;
@@ -2215,14 +2249,25 @@ input[type=number] {
   outline: unset !important;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 767px) {
   .filters-cont {
-    display: none;
+    display: block;
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    right: 0;
+    transform: translateX(125%);
+    transition: 0.5s;
+    background-color: #fff;
+    padding: 50px 25px;
+    width: calc(100% - 90px);
+    max-height: 100%;
+    overflow-y: auto;
   }
 }
 
 .filter-cont {
-  margin-bottom: 25px;
+  margin-bottom: 35px;
 }
 
 .result-cont {
@@ -2231,7 +2276,7 @@ input[type=number] {
 
 .filter-header {
   font-family: "Frutiger-bold";
-  font-size: 18px;
+  font-size: 16px;
   color: #231f20;
   padding-bottom: 10px;
   border-bottom: 2px solid #f5f5f5;
@@ -2285,7 +2330,7 @@ input[type=number] {
   margin-right: 8px;
   border-radius: 5px;
   background-color: #6d1c1c;
-  width: 55px;
+  width: 40px;
   height: 40px;
   border: 1px solid transparent;
   color: #e5e5ca;
@@ -2301,7 +2346,7 @@ input[type=number] {
 }
 
 .distance {
-  width: calc(100% - 63px);
+  width: calc(100% - 48px);
 }
 .distance .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
   border-radius: 5px;
@@ -2471,7 +2516,7 @@ input[type=number] {
   margin-right: 8px;
   border-radius: 5px;
   background-color: #6d1c1c;
-  width: 55px;
+  width: 40px;
   height: 40px;
   border: 1px solid transparent;
   color: #e5e5ca;
@@ -2489,7 +2534,7 @@ input[type=number] {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: calc(100% - 63px);
+  width: calc(100% - 48px);
 }
 .price-form .max,
 .price-form .min {
@@ -2552,14 +2597,21 @@ input[type=number] {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
+.seemore-menu a:before {
+  display: none !important;
+}
 
 .seemore {
   font-size: 16px;
-  color: #333;
+  color: #777676;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 10px;
+}
+.seemore span {
+  text-decoration: underline;
 }
 .seemore:after {
   content: "";
@@ -2568,6 +2620,7 @@ input[type=number] {
   margin-left: 10px;
   font-size: 10px;
   color: #333333;
+  border-bottom: 1px solid transparent;
 }
 .seemore:hover {
   color: #6d1c1c;
@@ -3092,7 +3145,6 @@ input[type=number] {
 }
 
 .enter1 {
-  background-color: #0f0;
   transform: translateX(0);
 }
 
