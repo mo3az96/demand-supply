@@ -2040,6 +2040,51 @@ input[type=number] {
   align-items: center;
   justify-content: space-between;
 }
+@media (max-width: 991px) {
+  .result-title {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 991px) {
+  .filters-xs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .filters-xs {
+    flex-direction: column;
+  }
+}
+.filters-xs .filters-btn {
+  margin-right: 8px;
+  border-radius: 5px;
+  background-color: #6d1c1c;
+  width: 55px;
+  height: 40px;
+  border: 1px solid transparent;
+  color: #e5e5ca;
+  font-size: 16px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 991px) {
+  .filters-xs .filters-btn {
+    display: flex;
+  }
+}
+@media (max-width: 767px) {
+  .filters-xs .filters-btn {
+    width: 100%;
+    order: 2;
+    margin-top: 20px;
+  }
+}
 
 .result-sort {
   display: flex;
@@ -2170,6 +2215,12 @@ input[type=number] {
   outline: unset !important;
 }
 
+@media (max-width: 991px) {
+  .filters-cont {
+    display: none;
+  }
+}
+
 .filter-cont {
   margin-bottom: 25px;
 }
@@ -2267,7 +2318,7 @@ input[type=number] {
 @media (max-width: 767px) {
   .distance .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
     margin-right: 0;
-    width: calc(100% - 146px);
+    width: 100%;
   }
 }
 .distance .dropdown-toggle {
@@ -2552,6 +2603,17 @@ input[type=number] {
 .result-cont .post:hover {
   background-color: #fafafa;
 }
+@media (max-width: 767px) {
+  .result-cont .post {
+    flex-direction: column;
+  }
+}
+@media (max-width: 767px) {
+  .result-cont .post-place {
+    margin-left: auto;
+    margin-right: 0;
+  }
+}
 .result-cont .post-info {
   padding: 25px;
   display: flex;
@@ -2561,6 +2623,11 @@ input[type=number] {
 }
 .result-cont .post-info p {
   border: none;
+}
+@media (max-width: 1199px) {
+  .result-cont .post-info {
+    padding: 20px;
+  }
 }
 .result-cont .postname {
   font-size: 16px;

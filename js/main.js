@@ -27,6 +27,9 @@ $(document).ready(function () {
     $('.megaxs-link').click(function () {
         $(this).children('.level2').toggleClass('enter1')
     });
+    $('.filters-btn').click(function () {
+        $('.filters-cont').slideToggle(500)
+    });
     $('.back').click(function () {
         $('.level2').removeClass('enter1')
     });
