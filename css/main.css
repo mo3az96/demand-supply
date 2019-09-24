@@ -1414,26 +1414,10 @@ input[type=number] {
 .post-info p:last-of-type {
   border-right: none;
 }
-
-.car-post .post-info p:first-of-type:after {
-  content: "";
-}
-.car-post .post-info p:last-of-type:after {
-  content: "";
-}
-
-.house-post .post-info p:first-of-type:after {
-  content: "";
-}
-.house-post .post-info p:last-of-type:after {
-  content: "";
-}
-
-.store-post .post-info p:first-of-type:after {
-  content: "";
-}
-.store-post .post-info p:last-of-type:after {
-  content: "";
+.post-info p i {
+  font-size: 15px;
+  color: #bcbcbc;
+  margin-left: 13px;
 }
 
 .see-more-ads {

@@ -162,65 +162,15 @@
         &:last-of-type {
             border-right: none;
         }
-    }
-}
 
-.car-post {
-    .post-info {
-        p {
-            &:first-of-type {
-                &:after {
-                    content: "\f3fd";
-                }
-            }
-
-            &:last-of-type {
-
-                &:after {
-                    content: "\f133";
-                }
-            }
+        i {
+            font-size: 15px;
+            color: #bcbcbc;
+            margin-left: 13px;
         }
     }
 }
 
-.house-post {
-    .post-info {
-        p {
-            &:first-of-type {
-                &:after {
-                    content: "\f546";
-                }
-            }
-
-            &:last-of-type {
-
-                &:after {
-                    content: "\f236";
-                }
-            }
-        }
-    }
-}
-
-.store-post {
-    .post-info {
-        p {
-            &:first-of-type {
-                &:after {
-                    content: "\f546";
-                }
-            }
-
-            &:last-of-type {
-
-                &:after {
-                    content: "\f5fd";
-                }
-            }
-        }
-    }
-}
 
 .see-more-ads {
     border-radius: 5px;
