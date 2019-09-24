@@ -93,10 +93,13 @@ $(document).ready(function () {
         $('html').toggleClass('overfolow')
     });
     $('.overlay').click(function () {
-        $('.filters-cont').removeClass('enter1')
-        $('.filters-btn').removeClass('filter-btn-transform')
-        $('body').toggleClass('overfolow')
-        $('html').toggleClass('overfolow')
+        if ($(window).width() <= 767) {
+            $('.filters-cont').removeClass('enter1')
+            $('.filters-btn').removeClass('filter-btn-transform')
+            $('body').toggleClass('overfolow')
+            $('html').toggleClass('overfolow')
+        }
+
     });
     if ($(window).width() <= 767) {
 
