@@ -38,9 +38,15 @@ $(document).ready(function () {
 
     });
     $('.mega-menu-btn').click(function () {
+        $('.mega-menu-btn').removeClass('link-active')
         $(this).toggleClass('link-active')
+        $('.megamenu-cont').toggleClass('megafade')
         $(this).children('.megamenu-cont').toggleClass('megafade')
         $('.overlay').toggle();
+        if ($(".megamenu-cont").hasClass("megafade")) {
+            $('.overlay').show();
+        }
+
     });
     $('.overlay').click(function () {
         $('.mega-menu-btn').removeClass('link-active')
